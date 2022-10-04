@@ -51,10 +51,14 @@ header h1 {
 	padding: 0.8rem 8.7rem;
 
 	text-align: center;
+
+	animation: tofront-h1 500ms;
 }
 
 header img {
 	margin: 3.2rem 12.4rem 1.6rem;
+
+	animation: tofront-img 500ms;
 }
 
 main {
@@ -66,8 +70,8 @@ main p {
 	font-family: var(--ff-texting);
 
 	font-weight: 400;
-	font-size: 2.0rem;
-	line-height: 1.5rem;
+	font-size: 1.7rem;
+	line-height: 2.5rem;
 
 	text-align: center;
 
@@ -89,6 +93,10 @@ main p {
 	height: auto;
 
 	object-fit: cover;
+
+	transition: all 200ms;
+
+	animation: topdown 600ms;
 }
 
 .card h2 {
@@ -115,4 +123,49 @@ main p {
 	position: absolute;
 	top: 1.6rem;
 	right: 1.6rem;
+}
+
+.card img:hover {
+	transform: scale(1.1);
+	opacity: 0.8;
+}
+
+
+@keyframes tofront-img {
+	0% {
+		opacity: 0;
+		transform: scale(0.5);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@keyframes tofront-h1 {
+	0% {
+		opacity: 0.4;		
+	}
+
+	100% {
+		opacity: 1;		
+	}
+}
+
+@keyframes topdown {
+	0% {
+		opacity: 0;
+		transform: translateY(-15px);
+	}
+
+	50% {
+		opacity: 0.5;
+		transform: translateY(15px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
