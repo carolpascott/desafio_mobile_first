@@ -1,5 +1,5 @@
 # Desafio mobile first
-![preview](./preview.png)
+![preview](./image/preview.png)
 
 > Trilha Explorer, Stage 03
 
